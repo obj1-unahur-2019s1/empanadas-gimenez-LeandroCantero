@@ -7,7 +7,7 @@ object galvan {
 	var deuda = 0
 	var dinero = 0
 	method sueldo() { return sueldo }
-	method sueldo(nuevoValor) { sueldo = nuevoValor }
+	method cambiarSueldo(nuevoValor) { sueldo = nuevoValor }
 	method totalDeuda() = deuda
 	method totalDinero() = dinero
 	method cobrarSueldo(){

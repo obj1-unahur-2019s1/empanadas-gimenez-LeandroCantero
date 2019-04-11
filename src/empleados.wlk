@@ -16,38 +16,27 @@ object galvan {
 			dinero += deuda
 			deuda -= deuda	
 		}
-		else {
-			deuda -= sueldo
-		}
+		else {deuda -= sueldo}
 	}
 	method gastar(cuanto){
 		if (dinero < cuanto){
 			deuda += cuanto - dinero
 			dinero = 0
 		}
-		else {
-			dinero -= cuanto
-		}
+		else {dinero -= cuanto}
 	}
 }
 
 object baigorria {
-	var sueldo = 0
+	var totalCobrado = 0
 	var cantidadEmpanadasVendidas = 100
 	var montoPorEmpanada = 15
-	var montoTotal = cantidadEmpanadasVendidas * montoPorEmpanada
-	
-	method venderEmpanada() {
-		cantidadEmpanadasVendidas += 1
-	}
- 	
-	method sueldo()= montoTotal
+	method sueldo()= cantidadEmpanadasVendidas * montoPorEmpanada
+	method totalCobrado() = totalCobrado
+	method venderEmpanada() {cantidadEmpanadasVendidas += 1}
 	method cobrarSueldo() {
-		sueldo += montoTotal
-		return sueldo
+		totalCobrado += self.sueldo()
 	}
-	method totalCobrado() = sueldo
-	
 }
 
 object gimenez {
